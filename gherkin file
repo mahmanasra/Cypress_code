@@ -1,0 +1,24 @@
+Feature : post new artical 
+
+	Scenario : go to Sign UP page  
+		Given I am on the home page for conduit 
+		when I click on sign up 
+		then I should see sign up page 
+
+	Scenario : create new account 
+		Given I am on the sign up page 
+		When I fill username with 'mahmoud'
+		And I fill Email with 'Mahmoud@manasra1.com'
+		And I fill Password "123456Zx"
+		And click on sign in 
+		Then i should foraward to home page login as new account with username 'Mahmoud'
+
+	Scenario : create new post 
+		Given I login to the conduit 
+		and i click on new post 
+		when i fill article titel with "test"
+		and i fill what's article about ? with "test2"
+		and if fill write your article "test3"
+		and click on publish artical 
+		then i should forward to new page "https://react-redux.realworld.io/#/article/test-688nmj?_k=yg0p3x"
+		and my article published successfully 
