@@ -6,7 +6,7 @@ describe( 'create new account', function(){
   cy.get('.nav-link').contains('Sign up').click()
 
 
- const userData = new UserData()  
+  
   //Fill data in sign up dorm
   cy.get('input[type="text"]').type('testuserha1')
   cy.get('input[type="email"]').type('mhmoud@manasratest.com')
