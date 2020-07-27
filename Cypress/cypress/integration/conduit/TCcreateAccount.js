@@ -1,4 +1,4 @@
-import UserData from '../../support/PageObjects/UserData';
+
 
 describe( 'create new account', function(){
  it('Sign up ', function(){
@@ -8,7 +8,7 @@ describe( 'create new account', function(){
 
  const userData = new UserData()  
   //Fill data in sign up dorm
-  userData.getUserName().type('testuserha1')
+  cy.get('input[type="text"]').type('testuserha1')
   cy.get('input[type="email"]').type('mhmoud@manasratest.com')
   cy.get('input[type="password"]').type('123456zX')
   cy.get('.btn').contains('Sign in').click()
